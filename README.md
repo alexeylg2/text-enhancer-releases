@@ -1,26 +1,34 @@
-# Text Enhancer — сборки
+# Text Enhancer — builds
 
-Text Enhancer — приложение в строке меню macOS: выделите текст в любой программе, нажмите ⌘T и выберите стиль —
-исправить ошибки, переписать в деловом стиле, перевести или ответить клиенту по базе знаний.
-Работает с LM Studio (локально), Claude, OpenAI, DeepSeek и DeepL.
+Text Enhancer is a macOS menu bar app: select text in any app, press ⌘T and pick a style to fix mistakes,
+rewrite it in a business tone, translate it, or answer a customer from your knowledge base.
+It works with LM Studio (local), Claude, OpenAI, DeepSeek and DeepL.
 
-Здесь только готовые сборки, исходный код хранится отдельно.
+This repository contains ready-to-install builds only; the source code lives elsewhere.
 
-## Скачать
+## Download
 
-**[Последняя версия — Text-Enhancer.zip](https://github.com/alexeylg2/text-enhancer-releases/releases/latest/download/Text-Enhancer.zip)**
+**[Latest version — Text-Enhancer.zip](https://github.com/alexeylg2/text-enhancer-releases/releases/latest/download/Text-Enhancer.zip)**
 
-Нужна macOS 14 Sonoma или новее, Mac на Apple Silicon или Intel. Все версии и список изменений — в [Releases](https://github.com/alexeylg2/text-enhancer-releases/releases).
+Requires macOS 14 Sonoma or later on Apple Silicon or Intel. All versions and changelogs are in
+[Releases](https://github.com/alexeylg2/text-enhancer-releases/releases).
 
-## Установка и обновление
+## Install
 
-1. Распакуйте архив и перетащите «Text Enhancer.app» в «Программы». При обновлении сначала закройте приложение:
-   значок в строке меню → «Выйти».
-2. Запустите приложение. macOS скажет, что не может проверить разработчика: сборка не нотаризована Apple.
-   Откройте «Системные настройки» → «Конфиденциальность и безопасность» и нажмите «Всё равно открыть».
-   Или выполните в Терминале:
+1. Unzip the archive and drag “Text Enhancer.app” to Applications.
+2. Open the app. macOS will say it can't verify the developer because the build isn't notarized by Apple.
+   Go to System Settings → Privacy & Security and click **Open Anyway**, or run in Terminal:
    ```bash
    xattr -dr com.apple.quarantine "/Applications/Text Enhancer.app"
    ```
-3. При первой установке включите Text Enhancer в «Конфиденциальность и безопасность» → «Универсальный доступ»
-   и введите свои API-ключи в настройках → «Модели». Ключи хранятся только в Связке ключей вашего Mac.
+3. Turn on Text Enhancer in System Settings → Privacy & Security → Accessibility,
+   and enter your API keys in the app's Settings → Models. Keys are stored only in your Mac's Keychain.
+
+## Update
+
+Starting with version 0.5.0 (18), the app checks for new releases at launch and once a day.
+When one is available, click **Update to …** in Settings → General or in the menu bar menu:
+the app downloads the new version, installs it and relaunches. Your settings, styles, API keys
+and Accessibility permission are kept, and there is no Gatekeeper prompt.
+
+Older versions have to be updated once by hand: quit the app (menu bar icon → Quit) and repeat the install steps.
